@@ -4,6 +4,7 @@ using HTTP
 using Cascadia
 using Gumbo
 
+# This is a sample crawler which crawls news data from TasnimNews Agency.
 
 function fetch_urls(tag, date)
     base_url = "https://www.tasnimnews.com"
@@ -83,14 +84,5 @@ end
 # Tags guide: politics("1"), sports("3"), culture("4"), economics("7")
 tags = ["1", "3", "4", "7"]
 date = (1399, 3, 1)
-file_name = ["politics", "sports", "culture", "economics", "test_news"]
-save_news(tags[1], date, file_name[5])
-
-# 365.982105 seconds (80.67 M allocations: 4.589 GiB,% gc time)
-# Finished! Wrote 275 news to economics.txt
-# 375.585427 seconds (89.68 M allocations: 4.004 GiB, 0.39% gc time)
-# Finished! Wrote 291 news to culture.txt
-# 648.753233 seconds (81.22 M allocations: 4.614 GiB, 0.15% gc time)
-# Finished! Wrote 278 news to sports.txt
-# 957.398795 seconds (81.68 M allocations: 4.672 GiB, 0.14% gc time)
-# Finished! Wrote 276 news to politics.txt
+file_name = ["politics", "sports", "culture", "economics"]
+save_news(tags[1], date, file_name[1])
